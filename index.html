@@ -8,14 +8,14 @@
 </head>
 <body ng-app="WorldTravel" ng-controller="BookListCtrl">
 <h1>Books </h1>
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">Wide World Travel</a>
-    </div>
-  </div>
-</nav>
 
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Wide World Travel guide</a>
+      </div>
+    </div>
+  </nav>
 <div ng-repeat="book in books">
   <ul>
     <li>type:  {{book.type}}</li>
@@ -34,7 +34,7 @@
 <!-- app file -->
 <script type="text/javascript" src="app/app.js"></script>
 <!-- providers files  -->
-<script type="text/javascript" src="app/factories/BookFactory.js"></script>
+<script type="text/javascript" src="app/factories/guideFactory.js"></script>
 <!-- controller file -->
 <script type="text/javascript" src="app/controllers/bookListCtrl.js"></script>
 </body>
