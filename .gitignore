@@ -1,0 +1,6 @@
+lib/bower_components
+lib/node_modules
+css/
+lib/src
+lib/.sass-cache
+.DS_Store
