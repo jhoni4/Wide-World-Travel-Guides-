@@ -1,21 +1,11 @@
 'use strict';
+//Inject your factory into bookCtrl.js as a dependency
 
-app.controller("BookCtrl", function($scope, $http, $q) {
+app.controller("BookListCtrl", function($scope, BookStorage) {
 
-  $scope.getBookList = () => {
-    let trips = [];
-    return $q((resolve, reject) => {
-      $http.get('../../data/guides.json')
-      .success((bookObject) => {
-        $scope.books = bookObject.guides;
-        console.log('HELLO', bookObject.guides);
-        resolve((bookObject));
-      })
-      .error((error) => {
-        reject(error);
-      });
-    });
-  };
-
+  BookStorage.getBookList()
+  .then((bookCollection) => {
+    $scope.books = bookCollection.guides;
+    console.log('HELLO', bookCollection.guides);
+  });
 });
-

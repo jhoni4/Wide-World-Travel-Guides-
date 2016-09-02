@@ -8,15 +8,9 @@
 </head>
 <body ng-app="WorldTravel">
 <h1>Books </h1>
-  <div  ng-controller="BookCtrl" ng-init="getBookList()">
-    <div ng-repeat="book in books">
-      <ul>
-        <li>type:  {{book.type}}</li>
-        <li>title:  {{book.title}}</li>
-        <li>price:  {{book.price}}</li>
-      </ul>
-    </div>
-  </div>
+<div ng-include="'partials/navbar.html'"></div>
+
+<div ng-controller="BookListCtrl" ng-include="'partials/guide-list.html'"></div>
 
 
 <!-- 3rd party libraries -->
@@ -27,6 +21,8 @@
 <script src="/lib/src/lib/angular-route/angular-route.min.js"></script>
 <!-- app file -->
 <script type="text/javascript" src="app/app.js"></script>
+<!-- providers (factories) files  -->
+<script type="text/javascript" src="app/factories/guideFactory.js"></script>
 <!-- controller file -->
 <script type="text/javascript" src="app/controllers/bookCtrl.js"></script>
 </body>
