@@ -1,5 +1,6 @@
 'use strict';
-
+//database interaction
+//moving the http call for guides.json from bookCtrl.js into guideFactory.js
 app.factory("BookStorage", ($q, $http) => {
 
   console.log("bookObject");
